@@ -1,0 +1,9 @@
+FROM golang:1.22
+
+WORKDIR /app
+
+COPY . .
+
+RUN go build -o fibonacci_sum "fibonacci_sum.go"
+
+CMD ["./fibonacci_sum"]

@@ -1,0 +1,9 @@
+FROM golang:1.22
+
+WORKDIR /app
+
+COPY . .
+
+RUN go build -o odd_even "odd_even.go"
+
+CMD ["./odd_even"]

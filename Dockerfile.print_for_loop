@@ -1,0 +1,9 @@
+FROM golang:1.22
+
+WORKDIR /app
+
+COPY . .
+
+RUN go build -o print_for_loop "print_for_loop.go"
+
+CMD ["./print_for_loop"]
